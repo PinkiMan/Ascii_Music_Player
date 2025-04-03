@@ -3,7 +3,7 @@ import time
 import os
 
 from utils.music_player import MusicPlayer, Song
-from utils.visuals import Visuals
+from utils.visual import Visuals
 
 "===================================================="
 directory = 'C:/Users/Pinki/Music/Kiss/'
