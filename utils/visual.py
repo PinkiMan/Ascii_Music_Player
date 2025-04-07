@@ -4,16 +4,8 @@ import threading
 import time
 import platform
 
-#from utils.music_player import MusicPlayer
+from utils.music_player import MusicPlayer, ActualSong
 
-
-class ActualSong:
-    def __init__(self, name, artist, duration, play_time, album):
-        self.name = name            # 'Beat It'
-        self.artist = artist        # 'Michael Jackson'
-        self.duration = duration    # 258
-        self.time = play_time       # 5
-        self.album = album          # 'Thriller'
 
 
 
@@ -68,6 +60,8 @@ class Visuals:
         self.do_autoresize = True
         self.fps = 10
 
+        self.actual_string = ''
+
     def print_line(self, text, text_color, border_color):
         "---------Row print---------"
         """print(border_color, end='')
@@ -84,8 +78,9 @@ class Visuals:
         "---------Row print---------"
         line_string = (f"{border_color}┃"
                        f"{text_color}{text.ljust(self.__window_width - 2, ' ')}"
-                       f"{border_color}┃{Colors.reset}")
-        print(line_string)
+                       f"{border_color}┃{Colors.reset}\n")
+        self.actual_string += line_string
+        #print(line_string)
 
 
     def print_box_start(self, text, border_color):
@@ -94,8 +89,9 @@ class Visuals:
         print('┏╸' + f'{text}╺'.ljust(self.__window_width - 3, '━') + '┓')
         print(Colors.reset, end='')"""
         "---------Start row print---------"
-        line_string = f"{border_color}┏╸{text}╺{'━'*(self.__window_width - 3 - len(text) - 1)}┓{Colors.reset}"
-        print(line_string)
+        line_string = f"{border_color}┏╸{text}╺{'━'*(self.__window_width - 3 - len(text) - 1)}┓{Colors.reset}\n"
+        self.actual_string += line_string
+        #print(line_string)
 
     def print_box_end(self, border_color):
         "---------End row print---------"
@@ -103,17 +99,20 @@ class Visuals:
         print('┗'+'━'* (self.__window_width - 2) +'┛')
         print(Colors.reset,end='')"""
         "---------End row print---------"
-        line_string = f"{border_color}┗{'━' * (self.__window_width - 2)}┛{Colors.reset}"
-        print(line_string)
+        line_string = f"{border_color}┗{'━' * (self.__window_width - 2)}┛{Colors.reset}\n"
+        self.actual_string += line_string
+        #print(line_string)
 
     def song_bar(self, actual_time, duration, border_color, text, secondary):
         line_len = 30
 
-        print(border_color, end='')
+        perc = int(actual_time / (duration / line_len))
+        actual_time_min = f"{actual_time // 60}:{str((actual_time % 60)).rjust(2, '0')}"
+        duration_min = f"{duration // 60}:{str(duration % 60).rjust(2, '0')}"
+
+        """print(border_color, end='')
         print('┃', end='')
         print(Colors.reset, end='')
-
-        perc = int(actual_time / (duration / line_len))
 
         print(text, end='')
         print('[' , end='')
@@ -127,9 +126,6 @@ class Visuals:
         print('─' * (line_len-perc) + ']', end='')
         print(Colors.reset, end='')
 
-        actual_time_min = f"{actual_time//60}:{str((actual_time%60)).rjust(2,'0')}"
-        duration_min = f"{duration//60}:{str(duration%60).rjust(2,'0')}"
-
         print(Colors.bold, end='')
         print(' '*10 + f"[{actual_time_min}/{duration_min}]".ljust(20) + ' '*15, end='')
         print(Colors.reset, end='')
@@ -138,7 +134,11 @@ class Visuals:
         print(border_color, end='')
         print('┃', end='')
         print(Colors.reset, end='')
-        print()
+        print()"""
+
+        line_string = (f"{border_color}┃{text}[{secondary}{'─' * perc}│{text}{'─' * (line_len-perc)}]"
+                       f"{Colors.bold}{' '*10}{('['+actual_time_min+'/'+duration_min+']').ljust(20)}{' '*15}{border_color}┃{Colors.reset}\n")
+        self.actual_string += line_string
 
     def auto_resize(self):
         size = os.get_terminal_size()
@@ -153,6 +153,8 @@ class Visuals:
 
     def update(self, song: ActualSong):
         # print(' Music player - v1')
+
+        self.actual_string = '\n\n\n'
 
         if self.do_autoresize:
             self.auto_resize()
@@ -173,24 +175,13 @@ class Visuals:
         self.print_line(f"{song.artist} - {song.album}", self.secondary_fg_color, self.primary_fg_color)
         self.song_bar(song.time, song.duration, self.primary_fg_color, self.primary_fg_color, self.tertiary_fg_color)
         self.print_box_end(self.primary_fg_color)
+        print(self.actual_string, end='')
 
-    def main(self):
-        new_song = ActualSong('Beat It', 'Michael Jackson', 258, 3, 'Thriller')
 
-        for i in range(258 + 1):
-            start = time.process_time()
-            self.update(new_song)
-            end = time.process_time()
-            time.sleep(1+start-end)
-            #time.sleep(1)
-        pass
 
 
 "========================================================================================================="
 
-os.system('clear')
-vis = Visuals()
+if __name__ == '__main__':
+    vis = Visuals()
 
-vis.main()
-
-time.sleep(100)

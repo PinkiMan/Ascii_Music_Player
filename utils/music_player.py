@@ -1,6 +1,7 @@
 import pygame
 import os
-
+import sys
+import time
 
 class Queue:
     def __init__(self):
@@ -22,10 +23,13 @@ class Queue:
         return len(self.queue)
 
 
-class Song:
+class ActualSong:
     def __init__(self):
-        self.name = ''
-        self.length = -1
+        self.name = ''  # 'Beat It'
+        self.artist = ''  # 'Michael Jackson'
+        self.duration = -1  # 258
+        self.time = -1  # 5
+        self.album = ''  # 'Thriller'
         self.filepath = ''
 
     def create_from_filename(self, filepath):
@@ -44,7 +48,7 @@ class MusicPlayer:
         pygame.mixer.music.set_endevent(pygame.USEREVENT)
 
         self.history_queue = Queue()
-        self.current_song = Song().empty()
+        self.current_song = ActualSong().empty()
         self.upcoming_queue = Queue()
 
         self.volume = 0.1
@@ -53,6 +57,9 @@ class MusicPlayer:
 
     def __is_playing(self):
         return pygame.mixer.music.get_busy()
+
+    def __get_time(self):
+        return pygame.mixer.music.get_pos()/1000
 
     def play(self):
         if not self.__is_playing():
@@ -102,6 +109,8 @@ class MusicPlayer:
 
 
     def handle_event(self):
+        self.current_song.time = int(self.__get_time())
+
         for event in pygame.event.get():
             if event.type == pygame.USEREVENT:
                 self.next_song()
@@ -131,3 +140,29 @@ class MusicPlayer:
     def exit(self):
         pygame.mixer.quit()
         pygame.quit()
+
+    def get_user_input(self):
+        running = True
+        while running:
+            command = input('> ').strip().lower()
+            sys.stdout.write("\033[F")
+            sys.stdout.write("\033[K")
+
+            if command == "play":
+                self.play()
+            elif command == "pause":
+                self.pause()
+            elif command == "stop":
+                self.stop()
+            elif command == "next":
+                self.next_song()
+                time.sleep(1)
+            elif command == "shuffle":
+                self.shuffle_queue()
+            elif command == "exit":
+                self.exit()
+                break
+            else:
+                pass
+                #print("Neznámý příkaz!")
+
