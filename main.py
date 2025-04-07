@@ -9,6 +9,7 @@ from utils.visual import Visuals
 
 "===================================================="
 directory = 'C:/Users/Pinki/Music/Kiss/'
+directory = '/Volumes/smb/Songs/'
 songs = []
 for song_name in os.listdir(directory):
     if not song_name.endswith('.mp3'):
@@ -22,6 +23,8 @@ for song_name in os.listdir(directory):
             audio = MP3(filepath)
             new_song.duration = int(audio.info.length)
             songs.append(new_song)
+            if len(songs) > 20:
+                break
         except Exception as Err:
             print(Err)
     else:
@@ -44,12 +47,12 @@ for song in songs:
 MP.play()
 
 while True:
-    start = time.process_time_ns()
+    start = time.process_time()
     MP.handle_event()
-    visual.update(MP.current_song)
-    end = time.process_time_ns()
+    visual.update(MP.current_song, MP.history_queue, MP.upcoming_queue)
+    end = time.process_time()
 
-    fps = 10
+    fps = 30
 
     if end - start < 1/fps:
         time.sleep(1/fps - (end-start))

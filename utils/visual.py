@@ -62,46 +62,50 @@ class Visuals:
 
         self.actual_string = ''
 
+
     def print_line(self, text, text_color, border_color):
-        "---------Row print---------"
-        """print(border_color, end='')
-        print('┃', end='')
-        print(Colors.reset, end='')
-
-        print(text_color, end='')
-        print(text.ljust(self.__window_width - 2, ' '), end='')
-        print(Colors.reset, end='')
-
-        print(border_color, end='')
-        print('┃', end='')
-        print(Colors.reset, end='')"""
-        "---------Row print---------"
         line_string = (f"{border_color}┃"
                        f"{text_color}{text.ljust(self.__window_width - 2, ' ')}"
                        f"{border_color}┃{Colors.reset}\n")
         self.actual_string += line_string
-        #print(line_string)
 
 
     def print_box_start(self, text, border_color):
-        "---------Start row print---------"
-        """print(border_color, end='')
-        print('┏╸' + f'{text}╺'.ljust(self.__window_width - 3, '━') + '┓')
-        print(Colors.reset, end='')"""
-        "---------Start row print---------"
         line_string = f"{border_color}┏╸{text}╺{'━'*(self.__window_width - 3 - len(text) - 1)}┓{Colors.reset}\n"
         self.actual_string += line_string
-        #print(line_string)
 
     def print_box_end(self, border_color):
-        "---------End row print---------"
-        """print(border_color,end='')
-        print('┗'+'━'* (self.__window_width - 2) +'┛')
-        print(Colors.reset,end='')"""
-        "---------End row print---------"
         line_string = f"{border_color}┗{'━' * (self.__window_width - 2)}┛{Colors.reset}\n"
         self.actual_string += line_string
-        #print(line_string)
+
+    def print_song_line(self, song, id, prim=None):
+        if prim is None:
+            prim = self.primary_fg_color
+        self.print_line(f" {str(id).ljust(5, ' ')}{song.name[:34].ljust(35, ' ')}", prim, self.tertiary_fg_color)
+
+    def print_queue_list(self, history_queue, current_song,  upcoming_queue):
+        printed = 1
+
+        h_nums = 5
+        if len(history_queue) < h_nums:
+            h_nums = len(history_queue)
+
+        for i in range(h_nums):
+            self.print_song_line(history_queue.queue[-i - 1], printed)
+            printed += 1
+
+        self.print_song_line(current_song, printed, self.secondary_fg_color)
+        printed += 1
+
+        u_nums = 5 + (5-h_nums)
+        if len(upcoming_queue) < u_nums:
+            u_nums = len(upcoming_queue)
+
+        for i in range(u_nums):
+            self.print_song_line(upcoming_queue.queue[i], printed)
+            printed += 1
+
+
 
     def song_bar(self, actual_time, duration, border_color, text, secondary):
         line_len = 30
@@ -109,32 +113,6 @@ class Visuals:
         perc = int(actual_time / (duration / line_len))
         actual_time_min = f"{actual_time // 60}:{str((actual_time % 60)).rjust(2, '0')}"
         duration_min = f"{duration // 60}:{str(duration % 60).rjust(2, '0')}"
-
-        """print(border_color, end='')
-        print('┃', end='')
-        print(Colors.reset, end='')
-
-        print(text, end='')
-        print('[' , end='')
-        print(Colors.reset, end='')
-
-        print(secondary, end='')
-        print('─' * perc + '│', end='')
-        print(Colors.reset, end='')
-
-        print(text, end='')
-        print('─' * (line_len-perc) + ']', end='')
-        print(Colors.reset, end='')
-
-        print(Colors.bold, end='')
-        print(' '*10 + f"[{actual_time_min}/{duration_min}]".ljust(20) + ' '*15, end='')
-        print(Colors.reset, end='')
-
-
-        print(border_color, end='')
-        print('┃', end='')
-        print(Colors.reset, end='')
-        print()"""
 
         line_string = (f"{border_color}┃{text}[{secondary}{'─' * perc}│{text}{'─' * (line_len-perc)}]"
                        f"{Colors.bold}{' '*10}{('['+actual_time_min+'/'+duration_min+']').ljust(20)}{' '*15}{border_color}┃{Colors.reset}\n")
@@ -151,10 +129,10 @@ class Visuals:
         elif plt == 'Windows':
             os.system(f"mode con: cols={self.__window_width} lines={self.__window_height}")
 
-    def update(self, song: ActualSong):
+    def update(self, song: ActualSong, history_queue,  upcoming_queue):
         # print(' Music player - v1')
 
-        self.actual_string = '\n\n\n'
+        self.actual_string = ''
 
         if self.do_autoresize:
             self.auto_resize()
@@ -164,8 +142,9 @@ class Visuals:
         self.print_line('ID   Title' + ' ' * 30 + 'Artist' + ' ' * 20 + 'Duration', self.secondary_fg_color,
                         self.tertiary_fg_color)
 
-        for _ in range(11):
-            self.print_line(' ', self.primary_fg_color, self.tertiary_fg_color)
+        self.print_queue_list(history_queue, song, upcoming_queue)
+        """for _ in range(11):
+            self.print_line(' ', self.primary_fg_color, self.tertiary_fg_color)"""
 
         self.print_box_end(self.tertiary_fg_color)
 
@@ -175,6 +154,8 @@ class Visuals:
         self.print_line(f"{song.artist} - {song.album}", self.secondary_fg_color, self.primary_fg_color)
         self.song_bar(song.time, song.duration, self.primary_fg_color, self.primary_fg_color, self.tertiary_fg_color)
         self.print_box_end(self.primary_fg_color)
+
+
         print(self.actual_string, end='')
 
 
@@ -184,4 +165,21 @@ class Visuals:
 
 if __name__ == '__main__':
     vis = Visuals()
+
+    new_song = ActualSong()
+    new_song.name = 'Beat It'
+    new_song.artist = 'Michael Jackson'
+    new_song.duration = 258
+    new_song.time = 0
+    new_song.album = 'Thriller'
+
+    for i in range(258 + 1):
+        start = time.process_time()
+        new_song.time = i
+        vis.update(new_song)
+        end = time.process_time()
+        time.sleep(1 + start - end)
+        # time.sleep(1)
+    pass
+
 

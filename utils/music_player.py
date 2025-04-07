@@ -52,6 +52,7 @@ class MusicPlayer:
         self.upcoming_queue = Queue()
 
         self.volume = 0.1
+        self.paused = False
 
         pygame.mixer.music.set_volume(self.volume)
 
@@ -62,10 +63,10 @@ class MusicPlayer:
         return pygame.mixer.music.get_pos()/1000
 
     def play(self):
-        if not self.__is_playing():
-            self.next_song()
+        if self.paused:
+            self.resume()
         else:
-            pygame.mixer.music.unpause()
+            self.next_song()
             #print('Pokračuje se v přehrávání')
 
     def resume(self):
@@ -74,6 +75,7 @@ class MusicPlayer:
 
     def pause(self):
         pygame.mixer.music.pause()
+        self.paused = True
         #print('Pozastaveno')
 
     def stop(self):
