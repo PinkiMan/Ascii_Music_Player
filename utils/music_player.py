@@ -1,45 +1,25 @@
+__author__ = "Pinkas Matěj"
+__copyright__ = ""
+__credits__ = []
+__license__ = ""
+__version__ = "0.0.1"
+__maintainer__ = "Pinkas Matěj"
+__email__ = "pinkas.matej@gmail.com"
+__status__ = "Prototype"
+__date__ = "08/04/2025"
+__created__ = "06/02/2025"
+
+"""
+Filename: music_player.py
+"""
+
 import pygame
 import os
 import sys
 import time
 
-class Queue:
-    def __init__(self):
-        self.queue = []
+from utils.classes import Queue, ActualSong
 
-    def insert(self, item):
-        self.queue.insert(0, item)
-
-    def add(self, item):
-        self.queue.append(item)
-
-    def pop(self):
-        return self.queue.pop(0)
-
-    def last(self):
-        return self.queue[0]
-
-    def __len__(self):
-        return len(self.queue)
-
-
-class ActualSong:
-    def __init__(self):
-        self.name = ''  # 'Beat It'
-        self.artist = ''  # 'Michael Jackson'
-        self.duration = -1  # 258
-        self.time = -1  # 5
-        self.album = ''  # 'Thriller'
-        self.filepath = ''
-
-    def create_from_filename(self, filepath):
-        self.filepath = filepath
-        self.name = '.'.join(os.path.basename(filepath).split('.')[:-1])
-
-    def empty(self):
-        self.name = 'Empty song'
-
-        return self
 
 class MusicPlayer:
     def __init__(self):

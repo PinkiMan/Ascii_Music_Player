@@ -1,3 +1,18 @@
+__author__ = "Pinkas Matěj"
+__copyright__ = ""
+__credits__ = []
+__license__ = ""
+__version__ = "0.0.1"
+__maintainer__ = "Pinkas Matěj"
+__email__ = "pinkas.matej@gmail.com"
+__status__ = "Prototype"
+__date__ = "08/04/2025"
+__created__ = "06/02/2025"
+
+"""
+Filename: main.py
+"""
+
 import random
 import time
 import os
@@ -7,9 +22,26 @@ from mutagen.mp3 import MP3
 from utils.music_player import MusicPlayer, ActualSong
 from utils.visual import Visuals
 
+# TODO: finish logo printing
+# TODO: rework logo printing (add to function)
+for _ in range(2):
+    print()
+
+offset = 20
+with open('data/logo', 'r') as file:
+    for line in file.readlines():
+        print(' '*offset+line, end='')
+
+for _ in range(1):
+    print()
+time.sleep(5)
+
+
 "===================================================="
+
 directory = 'C:/Users/Pinki/Music/Kiss/'
-directory = '/Volumes/smb/Songs/'
+#directory = '/Volumes/smb/Songs/'
+
 songs = []
 for song_name in os.listdir(directory):
     if not song_name.endswith('.mp3'):
@@ -49,7 +81,12 @@ MP.play()
 while True:
     start = time.process_time()
     MP.handle_event()
-    visual.update(MP.current_song, MP.history_queue, MP.upcoming_queue)
+
+    visual.history_queue = MP.history_queue
+    visual.current_song = MP.current_song
+    visual.upcoming_queue = MP.upcoming_queue
+
+    visual.update(MP.current_song)
     end = time.process_time()
 
     fps = 30

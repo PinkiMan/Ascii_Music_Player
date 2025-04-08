@@ -1,50 +1,23 @@
+__author__ = "Pinkas Matěj"
+__copyright__ = ""
+__credits__ = []
+__license__ = ""
+__version__ = "0.0.1"
+__maintainer__ = "Pinkas Matěj"
+__email__ = "pinkas.matej@gmail.com"
+__status__ = "Prototype"
+__date__ = "08/04/2025"
+__created__ = "03/03/2025"
+
+"""
+Filename: visual.py
+"""
+
 import os
-import sys
-import threading
 import time
 import platform
 
-from utils.music_player import MusicPlayer, ActualSong
-
-
-
-
-class Colors:
-    reset = '\033[0m'
-    bold = '\033[01m'
-    disable = '\033[02m'
-    underline = '\033[04m'
-    reverse = '\033[07m'
-    strikethrough = '\033[09m'
-    invisible = '\033[08m'
-
-    class Fg:
-        black = '\033[30m'
-        red = '\033[31m'
-        green = '\033[32m'
-        orange = '\033[33m'
-        blue = '\033[34m'
-        purple = '\033[35m'
-        cyan = '\033[36m'
-        light_grey = '\033[37m'
-        darkgrey = '\033[90m'
-        light_red = '\033[91m'
-        light_green = '\033[92m'
-        yellow = '\033[93m'
-        lightblue = '\033[94m'
-        pink = '\033[95m'
-        lightcyan = '\033[96m'
-
-    class Bg:
-        black = '\033[40m'
-        red = '\033[41m'
-        green = '\033[42m'
-        orange = '\033[43m'
-        blue = '\033[44m'
-        purple = '\033[45m'
-        cyan = '\033[46m'
-        lightgrey = '\033[47m'
-
+from utils.classes import Colors, ActualSong
 
 
 class Visuals:
@@ -53,22 +26,24 @@ class Visuals:
         self.__window_width = 80
         self.primary_fg_color = Colors.reset
         self.secondary_fg_color = Colors.bold
-        self.tertiary_fg_color = Colors.Fg.lightcyan
+        self.tertiary_fg_color = Colors.Fg.pink
 
-        self.actual_song = None
-        self.queue = []
+        self.history_queue = None
+        self.current_song = None
+        self.upcoming_queue = None
+
         self.do_autoresize = True
         self.fps = 10
 
         self.actual_string = ''
 
+        self.id_max_len = 2
 
     def print_line(self, text, text_color, border_color):
         line_string = (f"{border_color}┃"
                        f"{text_color}{text.ljust(self.__window_width - 2, ' ')}"
                        f"{border_color}┃{Colors.reset}\n")
         self.actual_string += line_string
-
 
     def print_box_start(self, text, border_color):
         line_string = f"{border_color}┏╸{text}╺{'━'*(self.__window_width - 3 - len(text) - 1)}┓{Colors.reset}\n"
@@ -78,34 +53,48 @@ class Visuals:
         line_string = f"{border_color}┗{'━' * (self.__window_width - 2)}┛{Colors.reset}\n"
         self.actual_string += line_string
 
-    def print_song_line(self, song, id, prim=None):
+    def print_song_line(self, song, s_id, prim=None):
         if prim is None:
             prim = self.primary_fg_color
-        self.print_line(f" {str(id).ljust(5, ' ')}{song.name[:34].ljust(35, ' ')}", prim, self.tertiary_fg_color)
 
-    def print_queue_list(self, history_queue, current_song,  upcoming_queue):
+        # TODO: add visualization for hours (playlists longer than hour)
+        # TODO: add check for characters in name (only some list of ASCII allowed)
+
+        name_len = 56
+
+        song_id = str(s_id)[:self.id_max_len]
+        name = song.name[:name_len]
+        duration = song.duration
+
+        line = f" {song_id.ljust(self.id_max_len, ' ')}{' '*2}{name.ljust(name_len, ' ')}{' ' * 5}[{duration // 60}:{str(duration % 60).rjust(2, '0')}]"
+        self.print_line(line, prim, self.tertiary_fg_color)
+
+    def print_queue_list(self):
         printed = 1
 
+        # TODO: fix printing history_queue (showing wrong songs after 5 played)
+
         h_nums = 5
-        if len(history_queue) < h_nums:
-            h_nums = len(history_queue)
+        if len(self.history_queue) < h_nums:
+            h_nums = len(self.history_queue)
 
         for i in range(h_nums):
-            self.print_song_line(history_queue.queue[-i - 1], printed)
+            self.print_song_line(self.history_queue.queue[-i - 1], printed)
             printed += 1
 
-        self.print_song_line(current_song, printed, self.secondary_fg_color)
+        self.print_song_line(self.current_song, printed, self.secondary_fg_color)
         printed += 1
 
         u_nums = 5 + (5-h_nums)
-        if len(upcoming_queue) < u_nums:
-            u_nums = len(upcoming_queue)
+        if len(self.upcoming_queue) < u_nums:
+            u_nums = len(self.upcoming_queue)
 
         for i in range(u_nums):
-            self.print_song_line(upcoming_queue.queue[i], printed)
+            self.print_song_line(self.upcoming_queue.queue[i], printed)
             printed += 1
 
-
+        for i in range(11-printed):
+            self.print_line('', self.primary_fg_color, self.tertiary_fg_color)
 
     def song_bar(self, actual_time, duration, border_color, text, secondary):
         line_len = 30
@@ -129,7 +118,7 @@ class Visuals:
         elif plt == 'Windows':
             os.system(f"mode con: cols={self.__window_width} lines={self.__window_height}")
 
-    def update(self, song: ActualSong, history_queue,  upcoming_queue):
+    def update(self, song: ActualSong):
         # print(' Music player - v1')
 
         self.actual_string = ''
@@ -139,10 +128,10 @@ class Visuals:
 
         self.print_box_start('Queue', self.tertiary_fg_color)
 
-        self.print_line('ID   Title' + ' ' * 30 + 'Artist' + ' ' * 20 + 'Duration', self.secondary_fg_color,
+        self.print_line('ID:' + ' '*self.id_max_len + 'Title:' + ' ' * 30 + 'Artist:' + ' ' * 20 + 'Duration:', self.secondary_fg_color,
                         self.tertiary_fg_color)
 
-        self.print_queue_list(history_queue, song, upcoming_queue)
+        self.print_queue_list()
         """for _ in range(11):
             self.print_line(' ', self.primary_fg_color, self.tertiary_fg_color)"""
 
