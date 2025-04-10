@@ -34,13 +34,13 @@ with open('data/logo', 'r') as file:
 
 for _ in range(1):
     print()
-time.sleep(5)
+#time.sleep(5)
 
 
 "===================================================="
 
-directory = 'C:/Users/Pinki/Music/Kiss/'
-#directory = '/Volumes/smb/Songs/'
+#directory = 'C:/Users/Pinki/Music/Kiss/'
+directory = '/Volumes/smb/Songs/Kiss/'
 
 songs = []
 for song_name in os.listdir(directory):

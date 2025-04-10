@@ -66,7 +66,7 @@ class Visuals:
         name = song.name[:name_len]
         duration = song.duration
 
-        line = f" {song_id.ljust(self.id_max_len, ' ')}{' '*2}{name.ljust(name_len, ' ')}{' ' * 5}[{duration // 60}:{str(duration % 60).rjust(2, '0')}]"
+        line = f" {song_id.rjust(self.id_max_len, ' ')}{' '*2}{name.ljust(name_len, ' ')}{' ' * 5}[{duration // 60}:{str(duration % 60).rjust(2, '0')}]"
         self.print_line(line, prim, self.tertiary_fg_color)
 
     def print_queue_list(self):
