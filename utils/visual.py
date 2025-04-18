@@ -2,11 +2,11 @@ __author__ = "Pinkas Matěj"
 __copyright__ = ""
 __credits__ = []
 __license__ = ""
-__version__ = "0.0.1"
+__version__ = "0.1.0"
 __maintainer__ = "Pinkas Matěj"
 __email__ = "pinkas.matej@gmail.com"
 __status__ = "Prototype"
-__date__ = "08/04/2025"
+__date__ = "18/04/2025"
 __created__ = "03/03/2025"
 
 """
@@ -17,7 +17,7 @@ import os
 import time
 import platform
 
-from utils.classes import Colors, ActualSong
+from utils.classes import Colors, ActualSongObject
 
 
 class Visuals:
@@ -26,7 +26,7 @@ class Visuals:
         self.__window_width = 80
         self.primary_fg_color = Colors.reset
         self.secondary_fg_color = Colors.bold
-        self.tertiary_fg_color = Colors.Fg.pink
+        self.tertiary_fg_color = Colors.Fg.lightcyan
 
         self.history_queue = None
         self.current_song = None
@@ -118,7 +118,7 @@ class Visuals:
         elif plt == 'Windows':
             os.system(f"mode con: cols={self.__window_width} lines={self.__window_height}")
 
-    def update(self, song: ActualSong):
+    def update(self):
         # print(' Music player - v1')
 
         self.actual_string = ''
@@ -139,9 +139,9 @@ class Visuals:
 
         self.print_box_start('Playing', self.primary_fg_color)
 
-        self.print_line(song.name, self.tertiary_fg_color, self.primary_fg_color)
-        self.print_line(f"{song.artist} - {song.album}", self.secondary_fg_color, self.primary_fg_color)
-        self.song_bar(song.time, song.duration, self.primary_fg_color, self.primary_fg_color, self.tertiary_fg_color)
+        self.print_line(self.current_song.name, self.tertiary_fg_color, self.primary_fg_color)
+        self.print_line(f"{self.current_song.artist}", self.secondary_fg_color, self.primary_fg_color)
+        self.song_bar(self.current_song.time, self.current_song.duration, self.primary_fg_color, self.primary_fg_color, self.tertiary_fg_color)
         self.print_box_end(self.primary_fg_color)
 
 
@@ -155,7 +155,7 @@ class Visuals:
 if __name__ == '__main__':
     vis = Visuals()
 
-    new_song = ActualSong()
+    new_song = ActualSongObject()
     new_song.name = 'Beat It'
     new_song.artist = 'Michael Jackson'
     new_song.duration = 258

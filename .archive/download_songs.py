@@ -8,6 +8,7 @@ def Download(link,Type="Audio"):
     cwd = os.getcwd()
     cwd = os.path.dirname(cwd)
     cwd = os.path.join(cwd, 'data', 'songs', 'dowloaded')
+    cwd = 'C:\\Users\\Pinki\\Music\\Songs\\downloaded\\'
 
     yt = YouTube(link)
 
@@ -29,7 +30,7 @@ def Webm_To_MP3(filepath):
     ose = os.path.dirname(os.path.dirname(filepath))
     name = os.path.basename(filepath)
     ose = os.path.join(ose, 'mp3', os.path.splitext(name)[0]+'.mp3')
-    print('ose', ose)
+
     Output= ose
     print(f"{Input} -> {Output}")
 
@@ -48,10 +49,28 @@ def Get_Link(Name):
 
 
 
-FILE=open('songs.txt','r',encoding='utf-8')
+with open('main_playlist.txt', 'r', encoding='utf-16') as file:
+    start_line = file.readline().strip()
+
+    categories = start_line.split('\t')
+
+    data = []
+    for line in file.readlines():
+        new = line.replace('\n', '').split('\t')
+        line_str = f"{new[0]} by {new[1]}"
+        data.append(line_str)
+
+for song in data[:170:]:
+    link = Get_Link(song)
+    Download(link)
+    print(f"Song: '{song}' downloaded")
+
+
+
+"""FILE=open('main_playlist.txt','r',encoding='utf-8')
 
 for ids, Song in enumerate(FILE):
     print(ids, "downloading: ", Song)
-    Download(Get_Link(Song.replace('\n', '')))
+    Download(Get_Link(Song.replace('\n', '')))"""
 
 

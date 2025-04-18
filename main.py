@@ -2,11 +2,11 @@ __author__ = "Pinkas Matěj"
 __copyright__ = ""
 __credits__ = []
 __license__ = ""
-__version__ = "0.0.1"
+__version__ = "0.1.0"
 __maintainer__ = "Pinkas Matěj"
 __email__ = "pinkas.matej@gmail.com"
 __status__ = "Prototype"
-__date__ = "08/04/2025"
+__date__ = "18/04/2025"
 __created__ = "06/02/2025"
 
 """
@@ -19,7 +19,8 @@ import os
 import threading
 from mutagen.mp3 import MP3
 
-from utils.music_player import MusicPlayer, ActualSong
+from utils.music_player import MusicPlayer
+from utils.classes import ActualSongObject, SongLibrary
 from utils.visual import Visuals
 
 # TODO: finish logo printing
@@ -39,15 +40,16 @@ for _ in range(1):
 
 "===================================================="
 
-#directory = 'C:/Users/Pinki/Music/Kiss/'
-directory = '/Volumes/smb/Songs/Kiss/'
+directory = 'C:/Users/Pinki/Music/Kiss/'
+directory = 'C:/Users/Pinki/Music/Songs/mp3/'
+#directory = '/Volumes/smb/Songs/Kiss/'
 
-songs = []
+"""songs = []
 for song_name in os.listdir(directory):
     if not song_name.endswith('.mp3'):
         continue
 
-    new_song = ActualSong().empty()
+    new_song = ActualSongObject().empty()
     filepath = os.path.join(directory, song_name)
     if os.path.exists(filepath):
         try:
@@ -60,10 +62,20 @@ for song_name in os.listdir(directory):
         except Exception as Err:
             print(Err)
     else:
-        print(f"Error {filepath} not exists")
+        print(f"Error {filepath} not exists")"""
+
+library = SongLibrary()
+songs = []
+names = library.get_songs_names()
+for name in names:
+    songs.append(library.from_json_to_class_song('name', name))
 
 random.shuffle(songs)
 "===================================================="
+
+
+
+
 
 os.system('mode con: cols=80 lines=20')
 
@@ -78,6 +90,8 @@ for song in songs:
 
 MP.play()
 
+
+
 while True:
     start = time.process_time()
     MP.handle_event()
@@ -86,10 +100,10 @@ while True:
     visual.current_song = MP.current_song
     visual.upcoming_queue = MP.upcoming_queue
 
-    visual.update(MP.current_song)
+    visual.update()
     end = time.process_time()
 
-    fps = 30
+    fps = 3
 
     if end - start < 1/fps:
         time.sleep(1/fps - (end-start))

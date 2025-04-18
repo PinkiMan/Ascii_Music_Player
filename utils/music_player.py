@@ -2,11 +2,11 @@ __author__ = "Pinkas Matěj"
 __copyright__ = ""
 __credits__ = []
 __license__ = ""
-__version__ = "0.0.1"
+__version__ = "0.1.0"
 __maintainer__ = "Pinkas Matěj"
 __email__ = "pinkas.matej@gmail.com"
 __status__ = "Prototype"
-__date__ = "08/04/2025"
+__date__ = "18/04/2025"
 __created__ = "06/02/2025"
 
 """
@@ -17,8 +17,9 @@ import pygame
 import os
 import sys
 import time
+import datetime
 
-from utils.classes import Queue, ActualSong
+from utils.classes import Queue, ActualSongObject, SongLibrary
 
 
 class MusicPlayer:
@@ -28,11 +29,14 @@ class MusicPlayer:
         pygame.mixer.music.set_endevent(pygame.USEREVENT)
 
         self.history_queue = Queue()
-        self.current_song = ActualSong().empty()
+        self.current_song = ActualSongObject().empty()
         self.upcoming_queue = Queue()
 
-        self.volume = 0.1
+        self.volume = 0.01
         self.paused = False
+
+        self.library = SongLibrary()
+        self.recommender = None
 
         pygame.mixer.music.set_volume(self.volume)
 
@@ -73,8 +77,13 @@ class MusicPlayer:
         if len(self.upcoming_queue) > 0:
             self.history_queue.insert(self.current_song)
 
+            if self.current_song.name != 'Empty song':
+                self.library.write_song_played(self.current_song)
+
             self.current_song = self.upcoming_queue.pop()
-            pygame.mixer.music.load(self.current_song.filepath)
+            self.current_song.start_datetime = datetime.datetime.today().strftime('%d/%m/%Y-%H:%M:%S')
+
+            pygame.mixer.music.load(os.path.join(self.library.song_directory, self.current_song.filename))
             pygame.mixer.music.play()
             #print(f'Hraje: {self.current_song.name}')
         else:
@@ -85,7 +94,7 @@ class MusicPlayer:
         self.history_queue.add(self.current_song)
 
         self.current_song = self.history_queue.last()
-        pygame.mixer.music.load(self.current_song.filepath)
+        pygame.mixer.music.load(os.path.join(self.library.song_directory, self.current_song.filename))
         pygame.mixer.music.play()
         #print(f'Předchozí píseň: {self.current_song.name}')
 
@@ -100,24 +109,6 @@ class MusicPlayer:
                 return True
         return False
 
-
-    def print_queue(self):
-        nums = 5
-
-        history_nums = nums if len(self.history_queue) else len(self.history_queue)
-        upcoming_nums = nums if len(self.upcoming_queue) else len(self.upcoming_queue)
-
-        names = []
-
-        for i in range(history_nums):
-            names.append(f"{-history_nums+len(names)} - {self.history_queue.queue[i].name}")
-
-        names.append(f" {-history_nums+len(names)} - {self.current_song.name}")
-
-        for i in range(upcoming_nums):
-            names.append(f"+{-history_nums+len(names)} - {self.upcoming_queue.queue[i].name}")
-
-        return '\n'.join(names)
 
     def exit(self):
         pygame.mixer.quit()
@@ -137,6 +128,8 @@ class MusicPlayer:
             elif command == "stop":
                 self.stop()
             elif command == "next":
+                self.current_song.skip_at_time = int(self.__get_time())
+                self.current_song.skip_datetime = datetime.datetime.today().strftime('%d/%m/%Y-%H:%M:%S')
                 self.next_song()
                 time.sleep(1)
             elif command == "shuffle":
