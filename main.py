@@ -14,56 +14,20 @@ Filename: main.py
 """
 
 import random
-import time
-import os
 import threading
-from mutagen.mp3 import MP3
 
 from utils.music_player import MusicPlayer
-from utils.classes import ActualSongObject, SongLibrary
+from utils.classes import SongLibrary
 from utils.visual import Visuals
 
 # TODO: finish logo printing
-# TODO: rework logo printing (add to function)
-for _ in range(2):
-    print()
 
-offset = 20
-with open('data/logo', 'r') as file:
-    for line in file.readlines():
-        print(' '*offset+line, end='')
+visual = Visuals()
 
-for _ in range(1):
-    print()
-#time.sleep(5)
-
+visual.set_cmd_size()
+visual.print_logo()
 
 "===================================================="
-
-directory = 'C:/Users/Pinki/Music/Kiss/'
-directory = 'C:/Users/Pinki/Music/Songs/mp3/'
-#directory = '/Volumes/smb/Songs/Kiss/'
-
-"""songs = []
-for song_name in os.listdir(directory):
-    if not song_name.endswith('.mp3'):
-        continue
-
-    new_song = ActualSongObject().empty()
-    filepath = os.path.join(directory, song_name)
-    if os.path.exists(filepath):
-        try:
-            new_song.create_from_filename(filepath)
-            audio = MP3(filepath)
-            new_song.duration = int(audio.info.length)
-            songs.append(new_song)
-            if len(songs) > 20:
-                break
-        except Exception as Err:
-            print(Err)
-    else:
-        print(f"Error {filepath} not exists")"""
-
 library = SongLibrary()
 songs = []
 names = library.get_songs_names()
@@ -74,16 +38,9 @@ random.shuffle(songs)
 "===================================================="
 
 
-
-
-
-os.system('mode con: cols=80 lines=20')
-
-
-visual = Visuals()
 MP = MusicPlayer()
 
-threading.Thread(target=MP.get_user_input, daemon=True).start()
+threading.Thread(target=MP.get_user_input_2, daemon=True).start()
 
 for song in songs:
     MP.add_to_queue(song)
@@ -91,21 +48,6 @@ for song in songs:
 MP.play()
 
 
-
-while True:
-    start = time.process_time()
-    MP.handle_event()
-
-    visual.history_queue = MP.history_queue
-    visual.current_song = MP.current_song
-    visual.upcoming_queue = MP.upcoming_queue
-
-    visual.update()
-    end = time.process_time()
-
-    fps = 3
-
-    if end - start < 1/fps:
-        time.sleep(1/fps - (end-start))
+visual.main(MP)
 
 

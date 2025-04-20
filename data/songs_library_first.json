@@ -53,7 +53,13 @@
             "genre": "",
             "duration": 157,
             "filename": "Pjanoo(Radio Edit)-Eric Prydz.mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "20/04/2025-21:39:19",
+                    "skip_datetime": "",
+                    "skip_at_time": -1
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=j26esoayz2c",
             "yt_name": "Pjanoo(Radio Edit)-Eric Prydz"
         },
@@ -75,7 +81,13 @@
             "genre": "",
             "duration": 187,
             "filename": "Something's Going On.mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "20/04/2025-22:08:58",
+                    "skip_datetime": "",
+                    "skip_at_time": -1
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=IwquM6HHb2Y",
             "yt_name": "Something's Going On"
         },
@@ -86,7 +98,13 @@
             "genre": "",
             "duration": 206,
             "filename": "Gigi D'Agostino - The Riddle.mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "18/04/2025-16:33:53",
+                    "skip_datetime": "",
+                    "skip_at_time": -1
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=cvvd-9azD1M",
             "yt_name": "Gigi D'Agostino - The Riddle"
         },
@@ -97,7 +115,13 @@
             "genre": "",
             "duration": 226,
             "filename": "Capital Cities - Safe And Sound.mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "20/04/2025-20:46:35",
+                    "skip_datetime": "",
+                    "skip_at_time": -1
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=47dtFZ8CFo8",
             "yt_name": "Capital Cities - Safe And Sound"
         },
@@ -537,7 +561,13 @@
             "genre": "",
             "duration": 209,
             "filename": "Erasure - A Little Respect (HMI Redux).mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "20/04/2025-20:58:32",
+                    "skip_datetime": "20/04/2025-20:58:43",
+                    "skip_at_time": 11
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=RO30UxZG4Vo",
             "yt_name": "Erasure - A Little Respect (HMI Redux)"
         },
@@ -669,7 +699,13 @@
             "genre": "",
             "duration": 64,
             "filename": "Y.M.C.A  Despicable Me 2  Screen Bites.mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "19/04/2025-16:38:49",
+                    "skip_datetime": "19/04/2025-16:38:52",
+                    "skip_at_time": 3
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=2vHB9MEp4nU",
             "yt_name": "Y.M.C.A  Despicable Me 2  Screen Bites"
         },
@@ -889,7 +925,13 @@
             "genre": "",
             "duration": 272,
             "filename": "Taylor Swift - Blank Space.mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "19/04/2025-11:19:42",
+                    "skip_datetime": "19/04/2025-11:19:50",
+                    "skip_at_time": 8
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=e-ORhEE9VVg",
             "yt_name": "Taylor Swift - Blank Space"
         },
@@ -944,7 +986,13 @@
             "genre": "",
             "duration": 234,
             "filename": "Pharrell Williams - Happy (from Despicable Me 2) [Ballroom Version].mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "20/04/2025-21:41:57",
+                    "skip_datetime": "",
+                    "skip_at_time": -1
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=C7dPqrmDWxs",
             "yt_name": "Pharrell Williams - Happy (from Despicable Me 2) [Ballroom Version]"
         },
@@ -1219,7 +1267,13 @@
             "genre": "",
             "duration": 244,
             "filename": "Bloodhound Gang - The Bad Touch.mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "20/04/2025-21:15:50",
+                    "skip_datetime": "",
+                    "skip_at_time": -1
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=xat1GVnl8-k",
             "yt_name": "Bloodhound Gang - The Bad Touch"
         },
@@ -1351,7 +1405,13 @@
             "genre": "",
             "duration": 203,
             "filename": "Axwell  Ingrosso - More Than You Know.mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "19/04/2025-17:02:32",
+                    "skip_datetime": "19/04/2025-17:03:00",
+                    "skip_at_time": 28
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=GsF05B8TFWg",
             "yt_name": "Axwell  Ingrosso - More Than You Know"
         },
@@ -1560,7 +1620,13 @@
             "genre": "",
             "duration": 184,
             "filename": "Olly Murs - Troublemaker ft. Flo Rida.mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "19/04/2025-13:54:34",
+                    "skip_datetime": "19/04/2025-13:54:56",
+                    "skip_at_time": 21
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=4aQDOUbErNg",
             "yt_name": "Olly Murs - Troublemaker ft. Flo Rida"
         },
@@ -1593,7 +1659,13 @@
             "genre": "",
             "duration": 125,
             "filename": "Davay - Tri Poloski (Audio).mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "19/04/2025-16:46:07",
+                    "skip_datetime": "19/04/2025-16:46:20",
+                    "skip_at_time": 13
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=K4OA_DHgfzE",
             "yt_name": "Davay - Tri Poloski (Audio)"
         },
@@ -1736,7 +1808,13 @@
             "genre": "",
             "duration": 256,
             "filename": "Tunak Tunak Tun Video  Daler Mehndi  Full Song  Daler Mehndi Music.mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "19/04/2025-14:02:51",
+                    "skip_datetime": "19/04/2025-14:02:59",
+                    "skip_at_time": 8
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=92ydUdqWE1g",
             "yt_name": "Tunak Tunak Tun Video  Daler Mehndi  Full Song  Daler Mehndi Music"
         },
@@ -2402,7 +2480,13 @@
             "genre": "",
             "duration": 90,
             "filename": "Pirates of the Caribbean - Soundtrack 15 - He's a Pirate.mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "20/04/2025-21:33:54",
+                    "skip_datetime": "",
+                    "skip_at_time": -1
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=dFBBKfw59kA",
             "yt_name": "Pirates of the Caribbean - Soundtrack 15 - He's a Pirate"
         },
@@ -2600,7 +2684,13 @@
             "genre": "",
             "duration": 269,
             "filename": "Boney M. - Rasputin (Sopot Festival 1979).mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "19/04/2025-19:20:18",
+                    "skip_datetime": "19/04/2025-19:24:39",
+                    "skip_at_time": 261
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=16y1AkoZkmQ",
             "yt_name": "Boney M. - Rasputin (Sopot Festival 1979)"
         },
@@ -3090,7 +3180,13 @@
             "genre": "",
             "duration": 247,
             "filename": "Kalinka (Vocal Extended Dance Mix).mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "20/04/2025-21:23:54",
+                    "skip_datetime": "20/04/2025-21:25:09",
+                    "skip_at_time": 74
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=8S0Hn-_pBCs",
             "yt_name": "Kalinka (Vocal Extended Dance Mix)"
         },
@@ -3904,7 +4000,13 @@
             "genre": "",
             "duration": 198,
             "filename": "Vance Joy - Riptide (Lyrics).mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "19/04/2025-19:24:39",
+                    "skip_datetime": "19/04/2025-19:24:41",
+                    "skip_at_time": 2
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=lYoWuaw5nSk",
             "yt_name": "Vance Joy - Riptide (Lyrics)"
         },
@@ -4003,7 +4105,13 @@
             "genre": "",
             "duration": 207,
             "filename": "Ava Max - Sweet but Psycho [Official Music Video].mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "20/04/2025-21:55:20",
+                    "skip_datetime": "",
+                    "skip_at_time": -1
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=WXBHCQYxwr0",
             "yt_name": "Ava Max - Sweet but Psycho [Official Music Video]"
         },
@@ -4025,7 +4133,13 @@
             "genre": "",
             "duration": 254,
             "filename": "Passenger  Let Her Go (Official Video).mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "19/04/2025-19:08:12",
+                    "skip_datetime": "19/04/2025-19:08:21",
+                    "skip_at_time": 9
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=RBumgq5yVrA",
             "yt_name": "Passenger  Let Her Go (Official Video)"
         },
@@ -4036,7 +4150,13 @@
             "genre": "",
             "duration": 236,
             "filename": "Beyoncé - Crazy In Love ft. JAY Z.mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "20/04/2025-20:42:20",
+                    "skip_datetime": "",
+                    "skip_at_time": -1
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=ViwtNLUqkMY",
             "yt_name": "Beyoncé - Crazy In Love ft. JAY Z"
         },
@@ -4416,7 +4536,13 @@
             "genre": "",
             "duration": 241,
             "filename": "Charlie Puth - One Call Away [Official Video].mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "19/04/2025-11:19:50",
+                    "skip_datetime": "19/04/2025-11:20:28",
+                    "skip_at_time": 38
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=BxuY9FET9Y4",
             "yt_name": "Charlie Puth - One Call Away [Official Video]"
         },
@@ -4702,7 +4828,13 @@
             "genre": "",
             "duration": 234,
             "filename": "Steve Aoki, Chris Lake & Tujamo - Boneless (Official Video).mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "20/04/2025-21:35:25",
+                    "skip_datetime": "",
+                    "skip_at_time": -1
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=gl2p4G3CUrI",
             "yt_name": "Steve Aoki, Chris Lake & Tujamo - Boneless (Official Video)"
         },
@@ -4922,7 +5054,13 @@
             "genre": "",
             "duration": 227,
             "filename": "David Guetta feat. Rihanna - Who's That Chick Official Video – (Day Video).mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "19/04/2025-19:16:16",
+                    "skip_datetime": "",
+                    "skip_at_time": -1
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=EAc4zHEDd7o",
             "yt_name": "David Guetta feat. Rihanna - Who's That Chick Official Video – (Day Video)"
         },
@@ -4988,7 +5126,13 @@
             "genre": "",
             "duration": 183,
             "filename": "Midnight Riot - Don't You Know Who I Am (Official Audio).mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "19/04/2025-19:01:12",
+                    "skip_datetime": "",
+                    "skip_at_time": -1
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=cUpK53XZDyE",
             "yt_name": "Midnight Riot - Don't You Know Who I Am (Official Audio)"
         },
@@ -5021,7 +5165,13 @@
             "genre": "",
             "duration": 173,
             "filename": "War.mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "19/04/2025-13:54:56",
+                    "skip_datetime": "19/04/2025-13:55:42",
+                    "skip_at_time": 46
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=0gD8G6yhNFg",
             "yt_name": "War"
         },
@@ -5043,7 +5193,13 @@
             "genre": "",
             "duration": 207,
             "filename": "Ed Sheeran - Remember The Name (feat. Eminem & 50 Cent) [Official Lyric Video].mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "19/04/2025-18:54:30",
+                    "skip_datetime": "",
+                    "skip_at_time": -1
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=ZX3B953Rc0I",
             "yt_name": "Ed Sheeran - Remember The Name (feat. Eminem & 50 Cent) [Official Lyric Video]"
         },
@@ -5087,7 +5243,13 @@
             "genre": "",
             "duration": 243,
             "filename": "RUN DMC - Walk This Way (Official HD Video) ft. Aerosmith.mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "19/04/2025-14:01:19",
+                    "skip_datetime": "19/04/2025-14:02:51",
+                    "skip_at_time": 92
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=4B_UYYPb-Gk",
             "yt_name": "RUN DMC - Walk This Way (Official HD Video) ft. Aerosmith"
         },
@@ -6000,7 +6162,13 @@
             "genre": "",
             "duration": 196,
             "filename": "Reckless.mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "19/04/2025-14:32:48",
+                    "skip_datetime": "",
+                    "skip_at_time": -1
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=XPDp2l2tX-o",
             "yt_name": "Reckless"
         },
@@ -6055,7 +6223,13 @@
             "genre": "",
             "duration": 191,
             "filename": "The Score - Bulletproof (Audio) ft. XYLØ.mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "17/04/2025-22:31:32",
+                    "skip_datetime": "",
+                    "skip_at_time": -1
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=BH8pv4Iht8g",
             "yt_name": "The Score - Bulletproof (Audio) ft. XYLØ"
         },
@@ -6721,7 +6895,13 @@
             "genre": "",
             "duration": 239,
             "filename": "NEFFEX - Best of Me [Official Video].mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "20/04/2025-21:19:55",
+                    "skip_datetime": "",
+                    "skip_at_time": -1
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=0Wa_CR0H8g4",
             "yt_name": "NEFFEX - Best of Me [Official Video]"
         },
@@ -7013,7 +7193,13 @@
             "genre": "",
             "duration": 220,
             "filename": "WARHALL - King of the World (Official Audio).mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "20/04/2025-21:12:10",
+                    "skip_datetime": "",
+                    "skip_at_time": -1
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=f71ct2lSxnI",
             "yt_name": "WARHALL - King of the World (Official Audio)"
         },
@@ -7129,7 +7315,13 @@
             "genre": "",
             "duration": 207,
             "filename": "RITA ORA - I Will Never Let You Down (Video).mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "20/04/2025-21:02:38",
+                    "skip_datetime": "20/04/2025-21:03:12",
+                    "skip_at_time": 33
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=50GQjUZ4P3M",
             "yt_name": "RITA ORA - I Will Never Let You Down (Video)"
         },
@@ -7162,7 +7354,13 @@
             "genre": "",
             "duration": 203,
             "filename": "Mother Mother - Hayloft I (Official Video).mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "19/04/2025-11:12:34",
+                    "skip_datetime": "",
+                    "skip_at_time": -1
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=fFt0s7crDfo",
             "yt_name": "Mother Mother - Hayloft I (Official Video)"
         },
@@ -7239,7 +7437,13 @@
             "genre": "",
             "duration": 189,
             "filename": "The Score - Legend (Audio).mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "19/04/2025-10:55:57",
+                    "skip_datetime": "",
+                    "skip_at_time": -1
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=jecQcgbyetw",
             "yt_name": "The Score - Legend (Audio)"
         },
@@ -7602,7 +7806,13 @@
             "genre": "",
             "duration": 196,
             "filename": "BADLANDS CALLING - Things Get Older.mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "19/04/2025-19:13:00",
+                    "skip_datetime": "",
+                    "skip_at_time": -1
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=UuPIFv1kIhg",
             "yt_name": "BADLANDS CALLING - Things Get Older"
         },
@@ -7878,7 +8088,13 @@
             "genre": "",
             "duration": 233,
             "filename": "Calvin Harris - Summer (Official Video).mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "20/04/2025-20:26:42",
+                    "skip_datetime": "",
+                    "skip_at_time": -1
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=ebXbLfLACGM",
             "yt_name": "Calvin Harris - Summer (Official Video)"
         },
@@ -8021,7 +8237,13 @@
             "genre": "",
             "duration": 169,
             "filename": "Oh The Larceny - This Is It (Official Audio).mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "20/04/2025-20:20:47",
+                    "skip_datetime": "",
+                    "skip_at_time": -1
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=qmsaUQ7JQOo",
             "yt_name": "Oh The Larceny - This Is It (Official Audio)"
         },
@@ -8120,7 +8342,13 @@
             "genre": "",
             "duration": 247,
             "filename": "NEFFEX - Rumors 💋 [Copyright Free] No.12.mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "19/04/2025-14:02:59",
+                    "skip_datetime": "",
+                    "skip_at_time": -1
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=kXptPzKNMq4",
             "yt_name": "NEFFEX - Rumors 💋 [Copyright Free] No.12"
         },
@@ -8197,7 +8425,13 @@
             "genre": "",
             "duration": 217,
             "filename": "Cris Cab - Liar Liar.mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "20/04/2025-21:31:36",
+                    "skip_datetime": "20/04/2025-21:33:54",
+                    "skip_at_time": 137
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=u-qYMl9T9wQ",
             "yt_name": "Cris Cab - Liar Liar"
         },
@@ -8241,7 +8475,13 @@
             "genre": "",
             "duration": 266,
             "filename": "Kanye West - Stronger.mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "19/04/2025-16:58:05",
+                    "skip_datetime": "",
+                    "skip_at_time": -1
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=PsO6ZnUZI0g",
             "yt_name": "Kanye West - Stronger"
         },
@@ -8340,7 +8580,13 @@
             "genre": "",
             "duration": 303,
             "filename": "Seven Devils.mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "20/04/2025-21:07:07",
+                    "skip_datetime": "",
+                    "skip_at_time": -1
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=SM8PU-mTSaI",
             "yt_name": "Seven Devils"
         },
@@ -8791,7 +9037,13 @@
             "genre": "",
             "duration": 196,
             "filename": "Glad You Came (Stereothief Remix Radio Edi).mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "19/04/2025-17:06:42",
+                    "skip_datetime": "19/04/2025-17:06:50",
+                    "skip_at_time": 8
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=q6xHUtV3TnU",
             "yt_name": "Glad You Came (Stereothief Remix Radio Edi)"
         },
@@ -8813,7 +9065,13 @@
             "genre": "",
             "duration": 170,
             "filename": "Jenny from the Block (Bronx Remix - Edit).mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "20/04/2025-20:34:59",
+                    "skip_datetime": "",
+                    "skip_at_time": -1
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=0-GprA5ML54",
             "yt_name": "Jenny from the Block (Bronx Remix - Edit)"
         },
@@ -8879,7 +9137,13 @@
             "genre": "",
             "duration": 307,
             "filename": "Sia - Elastic Heart feat. Shia LaBeouf & Maddie Ziegler (Official Video).mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "20/04/2025-20:50:21",
+                    "skip_datetime": "",
+                    "skip_at_time": -1
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=KWZGAExj-es",
             "yt_name": "Sia - Elastic Heart feat. Shia LaBeouf & Maddie Ziegler (Official Video)"
         },
@@ -9886,7 +10150,13 @@
             "genre": "",
             "duration": 196,
             "filename": "I DONT KNOW HOW BUT THEY FOUND ME -Choke.mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "19/04/2025-13:51:18",
+                    "skip_datetime": "",
+                    "skip_at_time": -1
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=mvJjmWTg7Qo",
             "yt_name": "I DONT KNOW HOW BUT THEY FOUND ME -Choke"
         },
@@ -9963,7 +10233,13 @@
             "genre": "",
             "duration": 363,
             "filename": "Gorillaz - Andromeda (Purple Disco Machine Remix).mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "20/04/2025-22:05:45",
+                    "skip_datetime": "20/04/2025-22:07:19",
+                    "skip_at_time": 93
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=tW3J9XnBbqk",
             "yt_name": "Gorillaz - Andromeda (Purple Disco Machine Remix)"
         },
@@ -10018,7 +10294,13 @@
             "genre": "",
             "duration": 266,
             "filename": "Gorillaz - On Melancholy Hill (Official Video).mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "19/04/2025-16:56:47",
+                    "skip_datetime": "19/04/2025-16:58:05",
+                    "skip_at_time": 78
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=04mfKJWDSzI",
             "yt_name": "Gorillaz - On Melancholy Hill (Official Video)"
         },
@@ -10161,7 +10443,13 @@
             "genre": "",
             "duration": 209,
             "filename": "Klergy with Valerie Broussard - Start A War (Riverdale Soundtrack).mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "20/04/2025-22:02:15",
+                    "skip_datetime": "",
+                    "skip_at_time": -1
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=9ab2_ASBnb0",
             "yt_name": "Klergy with Valerie Broussard - Start A War (Riverdale Soundtrack)"
         },
@@ -10321,7 +10609,13 @@
             "genre": "",
             "duration": 225,
             "filename": "Shangrii-La - Never Surrender (Official Audio) [Music used by That's Amazing & Juventus].mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "19/04/2025-11:15:57",
+                    "skip_datetime": "",
+                    "skip_at_time": -1
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=XAQ9wQdPNdo",
             "yt_name": "Shangrii-La - Never Surrender (Official Audio) [Music used by That's Amazing & Juventus]"
         },
@@ -10343,7 +10637,13 @@
             "genre": "",
             "duration": 194,
             "filename": "Graffiti Ghosts - I'm So Close I Can Taste It [Used by Riot Games, League of Legends, LCS Promo).mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "20/04/2025-21:28:22",
+                    "skip_datetime": "",
+                    "skip_at_time": -1
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=m3aRxNYtKZc",
             "yt_name": "Graffiti Ghosts - I'm So Close I Can Taste It [Used by Riot Games, League of Legends, LCS Promo)"
         },
@@ -10464,7 +10764,13 @@
             "genre": "",
             "duration": 182,
             "filename": "Mabel - Let Them Know (Official Video).mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "20/04/2025-20:55:29",
+                    "skip_datetime": "",
+                    "skip_at_time": -1
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=ehcRu2xPXHU",
             "yt_name": "Mabel - Let Them Know (Official Video)"
         },
@@ -10541,7 +10847,13 @@
             "genre": "",
             "duration": 221,
             "filename": "Taio Cruz - Troublemaker.mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "19/04/2025-17:03:00",
+                    "skip_datetime": "",
+                    "skip_at_time": -1
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=0mcsPfyWphU",
             "yt_name": "Taio Cruz - Troublemaker"
         },
@@ -10596,7 +10908,13 @@
             "genre": "",
             "duration": 129,
             "filename": "The Drum - The Seige.mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "19/04/2025-19:08:21",
+                    "skip_datetime": "",
+                    "skip_at_time": -1
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=7ujRptOjoAQ",
             "yt_name": "The Drum - The Seige"
         },
@@ -10899,7 +11217,13 @@
             "genre": "",
             "duration": 234,
             "filename": "Britney Spears - Work Bitch (Official Video).mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "20/04/2025-21:03:12",
+                    "skip_datetime": "",
+                    "skip_at_time": -1
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=pt8VYOfr8To",
             "yt_name": "Britney Spears - Work Bitch (Official Video)"
         },
@@ -11163,7 +11487,13 @@
             "genre": "",
             "duration": 234,
             "filename": "AWOLNATION - Woman Woman (Official Video).mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "19/04/2025-12:57:13",
+                    "skip_datetime": "",
+                    "skip_at_time": -1
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=8hc6egaAUjI",
             "yt_name": "AWOLNATION - Woman Woman (Official Video)"
         },
@@ -11647,7 +11977,13 @@
             "genre": "",
             "duration": 269,
             "filename": "The Clash - The Magnificent Seven (Video) (Remastered).mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "20/04/2025-20:37:50",
+                    "skip_datetime": "",
+                    "skip_at_time": -1
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=DoHLQTcbZCs",
             "yt_name": "The Clash - The Magnificent Seven (Video) (Remastered)"
         },
@@ -11867,7 +12203,13 @@
             "genre": "",
             "duration": 148,
             "filename": "Teddi Gold - Wink Wink (audio).mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "20/04/2025-22:12:05",
+                    "skip_datetime": "",
+                    "skip_at_time": -1
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=Wcs-RroPPx4",
             "yt_name": "Teddi Gold - Wink Wink (audio)"
         },
@@ -11889,7 +12231,13 @@
             "genre": "",
             "duration": 209,
             "filename": "Panic! At The Disco - House of Memories.mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "19/04/2025-17:06:50",
+                    "skip_datetime": "",
+                    "skip_at_time": -1
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=Mxv7O6BkJeE",
             "yt_name": "Panic! At The Disco - House of Memories"
         },
@@ -11911,7 +12259,13 @@
             "genre": "",
             "duration": 208,
             "filename": "One Night in Bangkok (Vinylshakerz Screen Cut).mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "20/04/2025-21:58:47",
+                    "skip_datetime": "",
+                    "skip_at_time": -1
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=ykXYlgFEuzw",
             "yt_name": "One Night in Bangkok (Vinylshakerz Screen Cut)"
         },
@@ -11988,7 +12342,13 @@
             "genre": "",
             "duration": 235,
             "filename": "Lil Nas X, Jack Harlow - INDUSTRY BABY (Official Video).mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "20/04/2025-20:58:43",
+                    "skip_datetime": "",
+                    "skip_at_time": -1
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=UTHLKHL_whs",
             "yt_name": "Lil Nas X, Jack Harlow - INDUSTRY BABY (Official Video)"
         },
@@ -12098,7 +12458,13 @@
             "genre": "",
             "duration": 170,
             "filename": "Robert Grace - Hate Me (Lyric Video).mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "20/04/2025-20:46:16",
+                    "skip_datetime": "20/04/2025-20:46:35",
+                    "skip_at_time": 18
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=6mSpAFATxME",
             "yt_name": "Robert Grace - Hate Me (Lyric Video)"
         },
@@ -12208,7 +12574,13 @@
             "genre": "",
             "duration": 144,
             "filename": "Willy Moon - Railroad Track.mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "19/04/2025-13:58:54",
+                    "skip_datetime": "",
+                    "skip_at_time": -1
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=PF479nQ-s8E",
             "yt_name": "Willy Moon - Railroad Track"
         },
@@ -12450,7 +12822,13 @@
             "genre": "",
             "duration": 137,
             "filename": "Into Your Arms - Whitt Lowry ( 𝚂𝚕𝚘𝚠𝚎𝚍 & 𝚁𝚎𝚟𝚎𝚛𝚋 )  ft. Ava Max - [No Rap]  𝐋𝐄𝐗𝐈𝐒.mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "19/04/2025-19:20:04",
+                    "skip_datetime": "19/04/2025-19:20:18",
+                    "skip_at_time": 13
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=tHB_Uakz54M",
             "yt_name": "Into Your Arms - Whitt Lowry ( 𝚂𝚕𝚘𝚠𝚎𝚍 & 𝚁𝚎𝚟𝚎𝚛𝚋 )  ft. Ava Max - [No Rap]  𝐋𝐄𝐗𝐈𝐒"
         },
@@ -12538,7 +12916,13 @@
             "genre": "",
             "duration": 191,
             "filename": "Fools Garden - Lemon Tree (Official HD Video).mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "20/04/2025-21:50:56",
+                    "skip_datetime": "20/04/2025-21:51:04",
+                    "skip_at_time": 8
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=wCQfkEkePx8",
             "yt_name": "Fools Garden - Lemon Tree (Official HD Video)"
         },
@@ -12725,7 +13109,13 @@
             "genre": "",
             "duration": 177,
             "filename": "David Guetta & Bebe Rexha - I'm Good (Blue) [Official Music Video].mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "19/04/2025-19:05:15",
+                    "skip_datetime": "",
+                    "skip_at_time": -1
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=90RLzVUuXe4",
             "yt_name": "David Guetta & Bebe Rexha - I'm Good (Blue) [Official Music Video]"
         },
@@ -12956,7 +13346,13 @@
             "genre": "",
             "duration": 224,
             "filename": "Jim Yosef - Arrow  House  NCS - Copyright Free Music.mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "19/04/2025-16:38:53",
+                    "skip_datetime": "19/04/2025-16:46:07",
+                    "skip_at_time": 112
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=5LI5QZVUU98",
             "yt_name": "Jim Yosef - Arrow  House  NCS - Copyright Free Music"
         },
@@ -13044,7 +13440,13 @@
             "genre": "",
             "duration": 192,
             "filename": "Vairo - Nightmare (Official Music Video).mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "20/04/2025-21:25:09",
+                    "skip_datetime": "",
+                    "skip_at_time": -1
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=v4SWvf0jBq8",
             "yt_name": "Vairo - Nightmare (Official Music Video)"
         },
@@ -13726,7 +14128,13 @@
             "genre": "",
             "duration": 524,
             "filename": "Megamix (Robyx Meg-a-mix).mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "20/04/2025-22:07:19",
+                    "skip_datetime": "20/04/2025-22:08:29",
+                    "skip_at_time": 69
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=f19H5gNLJw4",
             "yt_name": "Megamix (Robyx Meg-a-mix)"
         },
@@ -14551,7 +14959,13 @@
             "genre": "",
             "duration": 202,
             "filename": "Sigala, Ella Eyre - Came Here for Love (Official Video).mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "19/04/2025-13:01:55",
+                    "skip_datetime": "",
+                    "skip_at_time": -1
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=Uq8fE3kKIBk",
             "yt_name": "Sigala, Ella Eyre - Came Here for Love (Official Video)"
         },
@@ -14914,7 +15328,13 @@
             "genre": "",
             "duration": 234,
             "filename": "Regard - Ride It (Official Video).mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "19/04/2025-19:04:16",
+                    "skip_datetime": "19/04/2025-19:05:15",
+                    "skip_at_time": 58
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=ucVUEmjKsko",
             "yt_name": "Regard - Ride It (Official Video)"
         },
@@ -14925,7 +15345,13 @@
             "genre": "",
             "duration": 194,
             "filename": "SUR - ALL I NEED (Audio).mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "19/04/2025-18:57:58",
+                    "skip_datetime": "",
+                    "skip_at_time": -1
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=vSUEFOYG8gU",
             "yt_name": "SUR - ALL I NEED (Audio)"
         },
@@ -15222,7 +15648,13 @@
             "genre": "",
             "duration": 176,
             "filename": "Oliver Tree & David Guetta - Here We Go Again [Lyric Video].mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "18/04/2025-16:37:20",
+                    "skip_datetime": "",
+                    "skip_at_time": -1
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=20HK1Iktgj8",
             "yt_name": "Oliver Tree & David Guetta - Here We Go Again [Lyric Video]"
         },
@@ -15508,7 +15940,13 @@
             "genre": "",
             "duration": 280,
             "filename": "Nickelback - She Keeps Me Up (Official Music Video).mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "19/04/2025-19:24:41",
+                    "skip_datetime": "",
+                    "skip_at_time": -1
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=YoBldRsvciM",
             "yt_name": "Nickelback - She Keeps Me Up (Official Music Video)"
         },
@@ -15569,7 +16007,13 @@
             "genre": "",
             "duration": 262,
             "filename": "Manuel - Gas Gas Gas(Extended Mix).mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "20/04/2025-20:30:36",
+                    "skip_datetime": "",
+                    "skip_at_time": -1
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=V6KwGGnXiqs",
             "yt_name": "Manuel - Gas Gas Gas(Extended Mix)"
         },
@@ -15624,7 +16068,18 @@
             "genre": "",
             "duration": 140,
             "filename": "Bhali Kare Kartar  Official Video  Bir Singh  Ammy Virk  Aaja Mexico Challiye  Releasing 25 Feb.mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "19/04/2025-11:20:28",
+                    "skip_datetime": "19/04/2025-11:20:54",
+                    "skip_at_time": 25
+                },
+                {
+                    "start_datetime": "20/04/2025-22:08:29",
+                    "skip_datetime": "20/04/2025-22:08:58",
+                    "skip_at_time": 28
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=xywdYxdxqLs",
             "yt_name": "Bhali Kare Kartar  Official Video  Bir Singh  Ammy Virk  Aaja Mexico Challiye  Releasing 25 Feb"
         },
@@ -15767,7 +16222,13 @@
             "genre": "",
             "duration": 238,
             "filename": "Real McCoy - Another Night (Videoclip).mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "20/04/2025-20:16:44",
+                    "skip_datetime": "",
+                    "skip_at_time": -1
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=Pav2f4b-1ZE",
             "yt_name": "Real McCoy - Another Night (Videoclip)"
         },
@@ -15899,7 +16360,13 @@
             "genre": "",
             "duration": 255,
             "filename": "Sons Of Charlie - The Enemy Between My Ears (Tiktok).mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "20/04/2025-21:51:04",
+                    "skip_datetime": "",
+                    "skip_at_time": -1
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=G-t1O4n2tII",
             "yt_name": "Sons Of Charlie - The Enemy Between My Ears (Tiktok)"
         },
@@ -16031,7 +16498,13 @@
             "genre": "",
             "duration": 191,
             "filename": "Nickelback - When We Stand Together.mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "19/04/2025-13:55:42",
+                    "skip_datetime": "",
+                    "skip_at_time": -1
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=Y96WY5Do_bs",
             "yt_name": "Nickelback - When We Stand Together"
         },
@@ -16471,7 +16944,13 @@
             "genre": "",
             "duration": 149,
             "filename": "Jagwar Twin - Bad Feeling (Oompa Loompa) (Official Music Video).mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "19/04/2025-19:10:31",
+                    "skip_datetime": "",
+                    "skip_at_time": -1
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=aPxFKQfv-Co",
             "yt_name": "Jagwar Twin - Bad Feeling (Oompa Loompa) (Official Music Video)"
         },
@@ -16691,7 +17170,13 @@
             "genre": "",
             "duration": 305,
             "filename": "Love Italia (Extended Mix)  Manuel.mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "20/04/2025-21:45:51",
+                    "skip_datetime": "",
+                    "skip_at_time": -1
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=pJ_uTercFbU",
             "yt_name": "Love Italia (Extended Mix)  Manuel"
         },
@@ -16911,7 +17396,13 @@
             "genre": "",
             "duration": 185,
             "filename": "Tujamo - Drop That Low (Tujamo's Secret Weapon 2022) [Official Music Video].mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "20/04/2025-20:23:37",
+                    "skip_datetime": "",
+                    "skip_at_time": -1
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=KY2bKa2qCSs",
             "yt_name": "Tujamo - Drop That Low (Tujamo's Secret Weapon 2022) [Official Music Video]"
         },
@@ -17043,7 +17534,13 @@
             "genre": "",
             "duration": 255,
             "filename": "Rock You Like a Hurricane (2011).mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "20/04/2025-20:12:28",
+                    "skip_datetime": "",
+                    "skip_at_time": -1
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=WnJFQEHsSrU",
             "yt_name": "Rock You Like a Hurricane (2011)"
         },
@@ -17681,7 +18178,13 @@
             "genre": "",
             "duration": 214,
             "filename": "Florence + The Machine - Spectrum (Say My Name) (Calvin Harris remix).mp3",
-            "played": {},
+            "played": [
+                {
+                    "start_datetime": "19/04/2025-13:05:17",
+                    "skip_datetime": "",
+                    "skip_at_time": -1
+                }
+            ],
             "yt_link": "https://www.youtube.com/watch?v=O4-6Y_91v5I",
             "yt_name": "Florence + The Machine - Spectrum (Say My Name) (Calvin Harris remix)"
         },

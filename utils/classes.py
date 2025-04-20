@@ -42,7 +42,7 @@ class Colors:
         yellow = '\033[93m'
         lightblue = '\033[94m'
         pink = '\033[95m'
-        lightcyan = '\033[96m'
+        light_cyan = '\033[96m'
 
     class Bg:
         black = '\033[40m'
@@ -52,7 +52,7 @@ class Colors:
         blue = '\033[44m'
         purple = '\033[45m'
         cyan = '\033[46m'
-        lightgrey = '\033[47m'
+        light_grey = '\033[47m'
 
 
 class Queue:
